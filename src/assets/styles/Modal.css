@@ -1,0 +1,74 @@
+.backshadow {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backshadow .custom-modal {
+    width: 40rem;
+    height: 20rem;
+    background-color: #fae19d;
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#top-msg {
+    margin: 1.5rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.custom-modal input {
+    height: 3rem;
+    width: 90%;
+}
+
+#input-msg {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.buttons {
+   margin: 1rem;
+}
+
+#ok {
+    float: left;
+    margin-left: 4rem;
+    border-radius: 1rem;
+    background-color: green;
+    color: white;
+    width: 5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#cancel {
+    float: right;
+    margin-right: 4rem;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#ok[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+
+

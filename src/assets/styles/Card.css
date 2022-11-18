@@ -1,0 +1,54 @@
+.card img {
+    cursor: pointer;
+    width: 95%;
+    height: 95%;
+}
+
+.flipped img {
+    cursor: pointer;
+    width: 95%;
+    height: 95%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px; 
+    height: 100%;
+   
+}
+
+.flipped {
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px; 
+    height: 100%;
+ 
+}
+
+.card .front {
+    transform: rotateY(90deg);
+    position: absolute;
+    transition: all ease-in 0.2s;
+}
+
+.flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+
+.card .back {
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s; 
+}
+
+.flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
