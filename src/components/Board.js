@@ -48,7 +48,7 @@ export const Board = () => {
         )
       );
     }
-  }, []);
+  }, [storage.length]);
 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
@@ -65,7 +65,7 @@ export const Board = () => {
         });
         resetTurn();
       } else {
-        setTimeout(() => resetTurn(), 1000);
+        setTimeout(() => resetTurn(), 800);
       }
     }
     checkWinner(cards);
@@ -96,7 +96,7 @@ export const Board = () => {
   }, [level]);
 
   const boardRef = useRef(null);
-
+  
   useEffect(() => {
     boardRef.current.style.setProperty("--grid-size", gridSize);
   }, [gridSize]);
@@ -118,7 +118,7 @@ export const Board = () => {
       if (array[i].matched === true) {
         matchedCounter++;
       }
-      if (matchedCounter === array.length) {
+      if (matchedCounter === array.length && level < 4) {
         setLevel(level + 1);
       }
       if (matchedCounter === array.length && level === 4) {
